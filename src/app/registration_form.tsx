@@ -41,7 +41,7 @@ export default function Exercise1Registration() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>User Registration</Text>
+      <Text style={styles.title}>User Registration Form</Text>
 
       <TextInput style={styles.input} placeholder="Full Name" value={fullName} onChangeText={setFullName} />
       {errors.fullName && <Text style={styles.error}>{errors.fullName}</Text>}

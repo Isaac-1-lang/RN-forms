@@ -25,7 +25,7 @@ export default function Exercise8RentalApplication() {
 
     const bedNum = Number(bedrooms);
     if (!Number.isInteger(bedNum) || bedNum <= 0) {
-      tempErrors.bedrooms = 'Number of bedrooms must be an integer greater than 0.';
+      tempErrors.bedrooms = 'Number of bedrooms must be greater than 0.';
     }
 
     const rentNum = Number(monthlyRent);
@@ -53,7 +53,7 @@ export default function Exercise8RentalApplication() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Property Rental Application</Text>
+      <Text style={styles.title}>Property Rental Application Form</Text>
 
       <TextInput style={styles.input} placeholder="Applicant Name" value={applicantName} onChangeText={setApplicantName} />
       {errors.applicantName && <Text style={styles.error}>{errors.applicantName}</Text>}
@@ -130,5 +130,5 @@ const styles = StyleSheet.create({
   button: { backgroundColor: '#2e7d32', padding: 14, borderRadius: 6, alignItems: 'center', marginTop: 20 },
   buttonText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
   error: { color: 'red', fontSize: 12, marginTop: 4 },
-  success: { color: 'green', fontWeight: 'bold', marginTop: 15, textAlign: 'center' }
+  success:  { color: 'green', fontWeight: 'bold', marginTop: 15, textAlign: 'center' }
 });

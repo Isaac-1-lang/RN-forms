@@ -59,7 +59,7 @@ export default function Exercise4HospitalAppointment() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Hospital Appointment</Text>
+      <Text style={styles.title}>Hospital Appointment Request Form</Text>
 
       <TextInput style={styles.input} placeholder="Patient Name" value={patientName} onChangeText={setPatientName} />
       {errors.patientName && <Text style={styles.error}>{errors.patientName}</Text>}
