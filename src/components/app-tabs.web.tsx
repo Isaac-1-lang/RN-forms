@@ -18,7 +18,6 @@ import { ThemedView } from './themed-view';
 export default function AppTabs() {
   return (
     <Tabs>
-      <TabSlot style={{ height: '100%' }} />
       <TabList asChild>
         <CustomTabList>
           <TabTrigger name="registration_form" href="/registration_form" asChild>
@@ -47,6 +46,7 @@ export default function AppTabs() {
           </TabTrigger>
         </CustomTabList>
       </TabList>
+      <TabSlot style={{ flex: 1 }} />
     </Tabs>
   );
 }
@@ -70,13 +70,15 @@ export function CustomTabList(props: TabListProps) {
   const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
 
   return (
-    <View {...props} style={styles.tabListContainer}>
+    <View style={styles.tabListContainer}>
       <ThemedView type="backgroundElement" style={styles.innerContainer}>
         <ThemedText type="smallBold" style={styles.brandText}>
-          Expo Starter
+          e-Forms
         </ThemedText>
 
-        {props.children}
+        <View style={styles.tabsWrapper}>
+          {props.children}
+        </View>
 
         <ExternalLink href="https://docs.expo.dev" asChild>
           <Pressable style={styles.externalPressable}>
@@ -95,7 +97,6 @@ export function CustomTabList(props: TabListProps) {
 
 const styles = StyleSheet.create({
   tabListContainer: {
-    position: 'absolute',
     width: '100%',
     padding: Spacing.three,
     justifyContent: 'center',
@@ -108,12 +109,19 @@ const styles = StyleSheet.create({
     borderRadius: Spacing.five,
     flexDirection: 'row',
     alignItems: 'center',
-    flexGrow: 1,
-    gap: Spacing.two,
+    width: '100%',
     maxWidth: MaxContentWidth,
   },
   brandText: {
-    marginRight: 'auto',
+    marginRight: Spacing.three,
+    flexShrink: 0,
+  },
+  tabsWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    flex: 1,
+    flexWrap: 'wrap',
   },
   pressed: {
     opacity: 0.7,
@@ -129,5 +137,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.one,
     marginLeft: Spacing.three,
+    flexShrink: 0,
   },
 });

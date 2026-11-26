@@ -84,7 +84,7 @@ export default function Exercise3BankingTransfer() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 20, backgroundColor: '#fff', flexGrow: 1 },
+  container: { padding: 20, backgroundColor: '#fff', flexGrow: 1, paddingTop: 40 },
   title: { fontSize: 22, fontWeight: 'bold', marginBottom: 15 },
   input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 6, padding: 10, marginTop: 10 },
   button: { backgroundColor: '#0056b3', padding: 14, borderRadius: 6, alignItems: 'center', marginTop: 20 },

@@ -74,7 +74,7 @@ export default function Exercise1Registration() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 20, backgroundColor: '#fff', flexGrow: 1 },
+  container: { padding: 20, backgroundColor: '#fff', flexGrow: 1, paddingTop: 40 },
   title: { fontSize: 22, fontWeight: 'bold', marginBottom: 15 },
   input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 6, padding: 10, marginTop: 10 },
   switchRow: { flexDirection: 'row', alignItems: 'center', marginTop: 15 },
