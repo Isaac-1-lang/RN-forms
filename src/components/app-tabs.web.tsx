@@ -21,11 +21,29 @@ export default function AppTabs() {
       <TabSlot style={{ height: '100%' }} />
       <TabList asChild>
         <CustomTabList>
-          <TabTrigger name="home" href="/" asChild>
-            <TabButton>Home</TabButton>
+          <TabTrigger name="registration_form" href="/registration_form" asChild>
+            <TabButton>User Registr</TabButton>
           </TabTrigger>
-          <TabTrigger name="explore" href="/explore" asChild>
-            <TabButton>Explore</TabButton>
+          <TabTrigger name="job_application_form" href="/job_application_form" asChild>
+            <TabButton>Job Appl</TabButton>
+          </TabTrigger>
+          <TabTrigger name="money_transfer_form" href="/money_transfer_form" asChild>
+            <TabButton>Money Trans</TabButton>
+          </TabTrigger>
+          <TabTrigger name="property_rental" href="/property_rental" asChild>
+            <TabButton>Prop Rent</TabButton>
+          </TabTrigger>
+          <TabTrigger name="conference_registration" href="/conference_registration" asChild>
+            <TabButton>Conference</TabButton>
+          </TabTrigger>
+          <TabTrigger name="college_application_form" href="/college_application_form" asChild>
+            <TabButton>College Appl</TabButton>
+          </TabTrigger>
+          <TabTrigger name="checkout_form" href="/checkout_form" asChild>
+            <TabButton>Checkout</TabButton>
+          </TabTrigger>
+          <TabTrigger name="appoint_request_form" href="/appoint_request_form" asChild>
+            <TabButton>Appointment</TabButton>
           </TabTrigger>
         </CustomTabList>
       </TabList>
